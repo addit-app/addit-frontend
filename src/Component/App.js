@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-
 import { Layout } from 'antd';
+
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import Content from './Content/Content';
+
 import './App.css';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Sider } = Layout;
 class App extends Component {
   render() {
     return (
       <Layout>
-        <Header>header</Header>
+        <Header />
         <Layout>
           <Sider theme="light">left sidebar</Sider>
-          <Content theme="lgith">main content</Content>
+          <Content />
           <Sider theme="light">right sidebar</Sider>
         </Layout>
-        <Footer>footer</Footer>
+        <Footer />
       </Layout>
     );
   }
