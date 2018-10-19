@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class FeedItemList extends Component {
+class ItemList extends Component {
   render() {
     return (
       <div>
-          list by map...
+          {/* {this.props.items.map} */}
       </div>
     );
   }

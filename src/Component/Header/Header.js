@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
+import {
+  Layout,
+  Input,
+} from 'antd';
 
-const { Header} = Layout;
+import logo from '../../data/img/logo.png'
+
+const { Header } = Layout;
+const Search = Input.Search;
 
 class HeaderWrapper extends Component {
   render() {
     return (
       <Header>
+        <Search
+          placeholder="input search text"
+          onSearch={value => console.log(value)}
+          style={{ width: 200}}
+        />
+        <img className="logo" src={logo} />
         This is Header
       </Header>
     );

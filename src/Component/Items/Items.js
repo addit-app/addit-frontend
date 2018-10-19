@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { Skeleton, Switch, Card, Icon, Avatar } from 'antd';
-
-
-import CardContent from '../CardContent/CardContent';
+import {
+  Skeleton,
+  Switch,
+  Card,
+  Icon,
+  Avatar,
+  Tooltip,
+  Button,
+} from 'antd';
 
 const { Meta } = Card;
 
-class FeedItem extends Component {
+export class FeedCard extends Component {
   render() {
     return (
       <Card
@@ -19,12 +24,18 @@ class FeedItem extends Component {
             title="Card title"
             description="19 minutes ago"
           />
-          <CardContent />
         </Skeleton>
-
       </Card>
     );
   }
 }
 
-export default FeedItem;
+export class Tag extends Component {
+  render() {
+    return (
+      <Button>recommendataion</Button>
+      // <Button>{this.props}</Button>
+    );
+  }
+}
+
