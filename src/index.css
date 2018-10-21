@@ -14,6 +14,10 @@ code {
 }
 
 .logo {
-  height: 100%;
-  float: left;
+  height: 95%;
+  width: 95%;
+}
+
+.login {
+  color: white;
 }

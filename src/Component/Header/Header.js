@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {
   Layout,
+  Row,
+  Col,
   Input,
 } from 'antd';
 
@@ -13,13 +15,27 @@ class HeaderWrapper extends Component {
   render() {
     return (
       <Header>
-        <Search
-          placeholder="input search text"
-          onSearch={value => console.log(value)}
-          style={{ width: 200}}
-        />
-        <img className="logo" src={logo} />
-        This is Header
+        <Row gutter={16}>
+          <Col span={4}>
+            <div>
+              <img alt="logo" className="logo" src={logo} />
+            </div>
+          </Col>
+          <Col span={10}>
+            <Search
+              placeholder="input search text"
+              onSearch={value => console.log(value)}
+            />
+          </Col>
+          <Col
+            span={5}
+            offset={5}
+          >
+            <div className="login">
+              Login | SignUp
+            </div>
+          </Col>
+        </Row>
       </Header>
     );
   }
