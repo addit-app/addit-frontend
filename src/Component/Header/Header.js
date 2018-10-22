@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {
-  Layout,
-  Row,
   Col,
   Input,
+  Layout,
+  Row,
+  Tooltip,
 } from 'antd';
 
 import logo from '../../data/img/logo.png'
@@ -22,10 +23,16 @@ class HeaderWrapper extends Component {
             </div>
           </Col>
           <Col span={10}>
-            <Search
-              placeholder="input search text"
-              onSearch={value => console.log(value)}
-            />
+            <Tooltip
+              placement='right'
+              title='Work in Progress...'
+            >
+              <Search
+                placeholder="input search text"
+                onSearch={value => console.log(value)}
+                disabled
+              />
+            </Tooltip>
           </Col>
           <Col
             span={5}
