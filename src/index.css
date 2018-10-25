@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 body {
   margin: 0;
   padding: 0;
@@ -14,10 +16,34 @@ code {
 }
 
 .logo {
-  height: 95%;
-  width: 95%;
+  float: left;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
 }
 
+.logo img {
+  height: 50px;
+  margin: 5px 10px 5px 0px;
+}
 .login {
   color: white;
+  display: block;
+}
+
+.loginForm {
+  margin: 30vh 35vw;
+}
+
+.login-form {
+  width: 30vw;
+  height: 40vh;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
 }
