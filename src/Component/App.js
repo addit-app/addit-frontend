@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 import { Route, Switch } from 'react-router-dom';
+
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import { 
@@ -8,7 +9,8 @@ import {
   LeftSiderWrapper as LeftContent,
   RightSiderWrapper as RightContent
 } from './Content/Content';
-import { LoginForm } from './Login/LoginForm';
+import { LoginForm } from './Login/Login';
+import { RegisterForm } from './Register/Register';
 
 import './App.css';
 
@@ -37,7 +39,7 @@ class App extends Component {
             path='/login'
             render={()=>{
               return(
-                <LoginForm/>
+                <LoginForm />
               );
             }}
           />
@@ -45,7 +47,7 @@ class App extends Component {
             path='/signin'
             render={()=>{
               return(
-                <div></div>
+                <RegisterForm />
               )
             }}
           />

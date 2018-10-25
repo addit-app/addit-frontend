@@ -26,6 +26,8 @@ code {
   height: 50px;
   margin: 5px 10px 5px 0px;
 }
+
+/* Login Form */
 .login {
   color: white;
   display: block;
@@ -47,3 +49,12 @@ code {
 .login-form-button {
   width: 100%;
 }
+
+/* Register Form */
+.registerForm {
+  width: 30vw;
+}
+
+ .generatorForm {
+   width: 30vw;
+ }
