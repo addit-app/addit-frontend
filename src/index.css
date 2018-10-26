@@ -51,10 +51,20 @@ code {
 }
 
 /* Register Form */
+.registerPage {
+  margin: 30vh 35vw;
+}
+
+.formLabel {
+  font-size: 30px;
+  margin: 10px;
+}
 .registerForm {
   width: 30vw;
+  margin: 10px;
 }
 
  .generatorForm {
-   width: 30vw;
+  width: 30vw;
+  margin: 10px;
  }
