@@ -16,6 +16,14 @@ class Register extends React.Component {
     autoCompleteResult: [],
   };
 
+  onGenerateKey =(e) => {
+    this.props.form.setFieldsValue({
+      masterKey: "d2324",
+      privateKey: "adiew3",
+      publicKey: "sfdgsd",
+    });
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
@@ -79,12 +87,10 @@ class Register extends React.Component {
               </span>
             )}
           >
-            {getFieldDecorator('generator', {
+            {getFieldDecorator('masterKey', {
               rules: [{ whitespace: true }],
             })(
-              <Input
-                disabled
-              />
+              <Input disabled />
             )}
           </FormItem>
           <FormItem
@@ -95,12 +101,10 @@ class Register extends React.Component {
               </span>
             )}
           >
-            {getFieldDecorator('generator', {
+            {getFieldDecorator('privateKey', {
               rules: [{ whitespace: true }],
             })(
-              <Input
-                disabled
-              />
+              <Input disabled />
             )}
           </FormItem>
           <FormItem
@@ -111,14 +115,13 @@ class Register extends React.Component {
               </span>
             )}
           >
-            {getFieldDecorator('generator', {
+            {getFieldDecorator('publicKey', {
               rules: [{ whitespace: true }],
             })(
-              <Input
-                disabled
-              />
+              <Input disabled />
             )}
           </FormItem>
+          <Button type="primary" onClick={this.onGenerateKey}>Generate</Button>
         </Form>
         <Form
           onSubmit={this.handleSubmit}
