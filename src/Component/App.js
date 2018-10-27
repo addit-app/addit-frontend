@@ -11,6 +11,7 @@ import {
 } from './Content/Content';
 import { LoginForm } from './Login/Login';
 import { RegisterForm } from './Register/Register';
+import LandingPage from './Landing/Landing';
 
 import './App.css';
 
@@ -19,7 +20,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isLoggedIn: true,
+      isLoggedIn: true
     }
   }
 
@@ -28,7 +29,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route 
-            exact path="/app"
+            exact path="/"
             render={()=>{
               return(
                 <Layout>
