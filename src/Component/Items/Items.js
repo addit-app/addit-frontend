@@ -18,7 +18,12 @@ export class FeedCard extends Component {
   render() {
     return (
       <Card
-        style={{ width: 500, textAlign: "left", margin: 0, padding: 0 }}
+        style={{
+          width: 500,
+          textAlign: "left",
+          margin: 0,
+          padding: 0,
+        }}
         title={
           <div>
             <img
@@ -27,13 +32,16 @@ export class FeedCard extends Component {
               style={{ width: 80, borderRadius: 50}}
             /> 
             <span
-              style={{ margin: 20, fontSize: 20 }}
+              style={{
+                margin: 20,
+                fontSize: 20,
+              }}
             >
               {this.props.id}
             </span>
           </div>
         }
-        extra={moment(this.props.date).fromNow()}
+        extra={ moment(this.props.date).fromNow() }
         loading={false}
         actions={[
           <Icon type="like" />,
@@ -44,7 +52,10 @@ export class FeedCard extends Component {
         ]}
       > 
         <Card
-          style={{ margin: 0, border: "none" }}
+          style={{
+            margin: 0,
+            border: "none",
+          }}
           type="inner"
           cover={
             <img

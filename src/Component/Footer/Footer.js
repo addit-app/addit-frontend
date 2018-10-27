@@ -7,7 +7,7 @@ class FooterWrapper extends Component {
   render() {
     return (
       <Footer>
-        This is Footer
+        Addit
       </Footer>
     );
   }

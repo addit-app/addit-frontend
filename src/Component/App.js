@@ -15,12 +15,20 @@ import { RegisterForm } from './Register/Register';
 import './App.css';
 
 class App extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      isLoggedIn: true,
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <Switch>
           <Route 
-            exact path='/'
+            exact path="/app"
             render={()=>{
               return(
                 <Layout>
@@ -36,7 +44,7 @@ class App extends Component {
             }}
           />
           <Route
-            path='/login'
+            path="/login"
             render={()=>{
               return(
                 <LoginForm />
@@ -44,7 +52,7 @@ class App extends Component {
             }}
           />
           <Route
-            path='/signin'
+            path="/signin"
             render={()=>{
               return(
                 <RegisterForm />

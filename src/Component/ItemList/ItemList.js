@@ -7,7 +7,7 @@ import {
 
 import {
   FeedCard as Card,
-  Tag
+  Tag,
 } from '../Items/Items';
 
 export default class ItemList extends Component {

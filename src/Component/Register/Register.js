@@ -119,7 +119,12 @@ class Register extends React.Component {
               <Input disabled />
             )}
           </FormItem>
-          <Button type="primary" onClick={this.onGenerateKey}>Generate</Button>
+          <Button
+            type="primary"
+            onClick={this.onGenerateKey}
+          >
+            Generate
+          </Button>
         </Form>
         <Form
           className="registerForm"
@@ -138,7 +143,11 @@ class Register extends React.Component {
             )}
           >
             {getFieldDecorator('nickname', {
-              rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+              rules: [{
+                required: true,
+                message: 'Please input your nickname!',
+                whitespace: true
+              }],
             })(
               <Input />
             )}
@@ -149,9 +158,11 @@ class Register extends React.Component {
           >
             {getFieldDecorator('email', {
               rules: [{
-                type: 'email', message: 'The input is not valid E-mail!',
+                type: 'email',
+                message: 'The input is not valid E-mail!',
               }, {
-                required: true, message: 'Please input your E-mail!',
+                required: true,
+                message: 'Please input your E-mail!',
               }],
             })(
               <Input />
@@ -163,7 +174,8 @@ class Register extends React.Component {
           >
             {getFieldDecorator('password', {
               rules: [{
-                required: true, message: 'Please input your password!',
+                required: true,
+                message: 'Please input your password!',
               }],
             })(
               <Input type="password" />
@@ -175,21 +187,32 @@ class Register extends React.Component {
           >
             {getFieldDecorator('confirm', {
               rules: [{
-                required: true, message: 'Please confirm your password!',
+                required: true,
+                message: 'Please confirm your password!',
               }],
             })(
-              <Input type="password" onBlur={this.handleConfirmBlur} />
+              <Input
+                type="password"
+                onBlur={this.handleConfirmBlur}
+              />
             )}
           </FormItem>
           <FormItem {...tailFormItemLayout}>
             {getFieldDecorator('agreement', {
               valuePropName: 'checked',
             })(
-              <Checkbox>I have read the <a href="">agreement</a></Checkbox>
+              <Checkbox>
+                I have read the <a href="">agreement</a>
+              </Checkbox>
             )}
           </FormItem>
           <FormItem {...tailFormItemLayout}>
-            <Button type="primary" htmlType="submit">Register</Button>
+            <Button
+              type="primary"
+              htmlType="submit"
+            >
+              Register
+            </Button>
           </FormItem>
         </Form>
       </div>

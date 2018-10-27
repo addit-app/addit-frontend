@@ -20,7 +20,10 @@ class HeaderWrapper extends Component {
           span={5}
         >
           <div className="logo">
-            <img alt="icon" src={logo} />
+            <img
+              alt="icon"
+              src={logo}
+            />
             Addit
           </div>
         </Col>
