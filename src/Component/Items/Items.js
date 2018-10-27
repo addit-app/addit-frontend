@@ -8,6 +8,9 @@ import {
   Tooltip,
   Button,
 } from 'antd';
+import moment from 'moment';
+
+import DefaultImage from '../../data/img/default.png'
 
 const { Meta } = Card;
 
@@ -15,16 +18,47 @@ export class FeedCard extends Component {
   render() {
     return (
       <Card
-          style={{ width: 300, marginTop: 16 }}
-          actions={[<Icon type="like" />, <Icon type="edit" />, <Icon type="retweet" />, <Icon type="ellipsis" />, <Icon type="dollar" />]}
-      >
-        <Skeleton loading={false} avatar active>
+        style={{ width: 500, textAlign: "left", margin: 0, padding: 0 }}
+        title={
+          <div>
+            <img
+              alt="profile"
+              src={this.props.img}
+              style={{ width: 80, borderRadius: 50}}
+            /> 
+            <span
+              style={{ margin: 20, fontSize: 20 }}
+            >
+              {this.props.id}
+            </span>
+          </div>
+        }
+        extra={moment(this.props.date).fromNow()}
+        loading={false}
+        actions={[
+          <Icon type="like" />,
+          <Icon type="edit" />,
+          <Icon type="retweet" />,
+          <Icon type="ellipsis" />,
+          <Icon type="dollar" />
+        ]}
+      > 
+        <Card
+          style={{ margin: 0, border: "none" }}
+          type="inner"
+          cover={
+            <img
+              className="thumbnail"
+              alt="cover"
+              src={DefaultImage}
+            />
+          }
+        >
           <Meta
-            avatar={<Avatar src="https://s14.favim.com/610/160726/95-bts-icon-icons-Favim.com-4557374.jpeg" />}
-            title="Card title"
-            description="19 minutes ago"
+            title="방탄소년단 RM-mono 2018"
+            description="clicdfasfgkvhladsjklfnbhlysuafhkjk"
           />
-        </Skeleton>
+        </Card>
       </Card>
     );
   }

@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
-
 import {
-  FeedCard as Card,
-  Tag
-} from '../Items/Items';
+  Layout,
+  Col,
+  Row,
+} from 'antd';
 
-const { Content, Sider } = Layout;
+import ItemList from '../ItemList/ItemList';
+
+const { 
+  Content,
+  Sider,
+} = Layout;
 
 export class MainContentWrapper extends Component {
   render() {
     return (
       <Content>
-        <Card />
+        <Row>
+          <Col offset={8}>
+            <ItemList length={23} />
+          </Col>
+        </Row>
       </Content>
     );
   }
@@ -22,7 +30,7 @@ export class LeftSiderWrapper extends Component {
   render() {
     return (
       <Sider theme="light">
-        <Tag />
+        {/* <Tag /> */}
       </Sider>
     )
   }

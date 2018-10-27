@@ -26,6 +26,10 @@ code {
   height: 50px;
   margin: 5px 10px 5px 0px;
 }
+.thumbnail {
+  height: 300px;
+  overflow: hidden;
+}
 
 /* Login Form */
 .login {
@@ -50,6 +54,9 @@ code {
   width: 100%;
 }
 
+.ant-card-body {
+  padding: 0;
+}
 /* Register Form */
 .registerPage {
   margin: 30vh 35vw;
