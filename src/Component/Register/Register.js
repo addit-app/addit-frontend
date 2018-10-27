@@ -75,10 +75,8 @@ class Register extends React.Component {
 
     return (
       <div className="registerPage">
-        <Form
-          className="generatorForm"
-        >
-          <span>Generate Key</span>
+        <Form className="generatorForm">
+          <span className="formLabel">Generate Key</span>
           <FormItem
             {...formItemLayout}
             label={(
@@ -124,10 +122,10 @@ class Register extends React.Component {
           <Button type="primary" onClick={this.onGenerateKey}>Generate</Button>
         </Form>
         <Form
-          onSubmit={this.handleSubmit}
           className="registerForm"
+          onSubmit={this.handleSubmit}
         >
-          <span>Creat Account</span>
+          <span className="formLabel">Creat Account</span>
           <FormItem
             {...formItemLayout}
             label={(
